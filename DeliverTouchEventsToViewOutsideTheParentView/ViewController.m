@@ -37,4 +37,11 @@
     NSLog(@"click button");
 }
 
+- (void)test {
+    if (YES) NSLog(@"bad style code!");
+    
+    [UIView animateWithDuration:1.0f animations:^{
+        NSLog(@" ppppp ");
+    } completion:nil];}
+
 @end
