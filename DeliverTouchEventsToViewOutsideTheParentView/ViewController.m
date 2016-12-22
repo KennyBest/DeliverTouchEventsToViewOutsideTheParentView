@@ -38,10 +38,16 @@
 }
 
 - (void)test {
-    if (YES) NSLog(@"bad style code!");
+    if (YES) {NSLog(@"bad style code!");};
     
     [UIView animateWithDuration:1.0f animations:^{
         NSLog(@" ppppp ");
-    } completion:nil];}
+    } completion:nil];
+    [self performSelector:@selector(test1) withObject:nil afterDelay:3];
+}
+
+- (void)test1 {
+    NSLog(@"excute test1");
+}
 
 @end
