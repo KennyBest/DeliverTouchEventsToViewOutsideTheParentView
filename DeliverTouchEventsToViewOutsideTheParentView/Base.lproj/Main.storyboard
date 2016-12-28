@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jbc-PD-clV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Event Delivery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超出父视图bounds之外的子视图也可以接收事件" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-dq-zyQ">
-                                <rect key="frame" x="16" y="212" width="343" height="21"/>
+                                <rect key="frame" x="16" y="192" width="343" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
                                 <rect key="frame" x="126.5" y="258.5" width="122" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ParentView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FP-nA-ePz" userLabel="ParentViewLabel">
-                                        <rect key="frame" x="17.5" y="64.5" width="86.5" height="21"/>
+                                        <rect key="frame" x="17.5" y="65" width="86.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TargetViewFlag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3n-T0-vvN">
-                                                <rect key="frame" x="70.5" y="11" width="119" height="21"/>
+                                                <rect key="frame" x="71" y="11.5" width="118.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -78,19 +78,101 @@
                                     <outlet property="targetView" destination="sWO-Sb-Vl9" id="vDo-66-z0f"/>
                                 </connections>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Ar-MWh">
+                                <rect key="frame" x="16" y="597" width="343" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKv-aT-RLP">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Shake Motion"/>
+                                        <connections>
+                                            <segue destination="A4l-G3-IFI" kind="push" id="3Sq-N3-gzN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-JS-LWU">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="加速计"/>
+                                        <connections>
+                                            <segue destination="x8e-bA-jzz" kind="push" id="8tP-11-PTb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="2s2-dq-zyQ" secondAttribute="trailing" id="D4R-T3-mfl"/>
                             <constraint firstItem="IHc-8B-bYI" firstAttribute="top" secondItem="2s2-dq-zyQ" secondAttribute="bottom" constant="25.5" id="I34-cd-jqO"/>
+                            <constraint firstItem="lMe-Ar-MWh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LAO-Pg-tsL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lMe-Ar-MWh" secondAttribute="bottom" id="LGs-SY-NLg"/>
                             <constraint firstItem="2s2-dq-zyQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lk7-T9-tLN"/>
                             <constraint firstItem="IHc-8B-bYI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PV2-C4-1RS"/>
                             <constraint firstItem="IHc-8B-bYI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XB4-BT-aDm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lMe-Ar-MWh" secondAttribute="trailing" id="YWV-jy-9hK"/>
                             <constraint firstItem="2s2-dq-zyQ" firstAttribute="centerX" secondItem="IHc-8B-bYI" secondAttribute="centerX" id="oHV-wB-071"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Event Delivery" id="pJy-kj-rGD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--Motion Event-->
+        <scene sceneID="AHf-8R-Cc6">
+            <objects>
+                <viewController id="x8e-bA-jzz" customClass="MotionEventViewController" customModule="DeliverTouchEventsToViewOutsideTheParentView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Ue-hQ-xx9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZUT-dU-E2e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="42M-FR-oZy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Motion Event" id="Bwa-tc-baP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLc-ge-LSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="124"/>
+        </scene>
+        <!--Shake Motion-->
+        <scene sceneID="m3S-nM-ulP">
+            <objects>
+                <viewController id="A4l-G3-IFI" customClass="ShakeMotionViewController" customModule="DeliverTouchEventsToViewOutsideTheParentView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hoU-Xh-f1C"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pxg-qS-WXv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oiL-gn-INA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shake Motion" id="HNR-Il-D8y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1P-2o-KpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="851"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ru1-4n-hSf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbc-PD-clV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SCT-Jd-yjI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TnU-Wy-DGq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uo8-ve-Bcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
