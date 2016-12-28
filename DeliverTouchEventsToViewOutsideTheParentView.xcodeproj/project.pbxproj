@@ -17,6 +17,8 @@
 		4E889A441E08DB1F001A5FC4 /* SFParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E889A431E08DB1F001A5FC4 /* SFParentView.swift */; };
 		B92DD18A1E11620000A73F2D /* MotionEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DD1891E11620000A73F2D /* MotionEventViewController.swift */; };
 		B98EB12E1E12A4DC0072A835 /* ShakeMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98EB12D1E12A4DC0072A835 /* ShakeMotionViewController.swift */; };
+		B9AC8A451E13E6C50024ABF9 /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AC8A441E13E6C50024ABF9 /* AccelerometerViewController.swift */; };
+		B9AC8A471E13E6F10024ABF9 /* GyroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AC8A461E13E6F10024ABF9 /* GyroscopeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		4E889A431E08DB1F001A5FC4 /* SFParentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFParentView.swift; sourceTree = "<group>"; };
 		B92DD1891E11620000A73F2D /* MotionEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionEventViewController.swift; sourceTree = "<group>"; };
 		B98EB12D1E12A4DC0072A835 /* ShakeMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeMotionViewController.swift; sourceTree = "<group>"; };
+		B9AC8A441E13E6C50024ABF9 /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
+		B9AC8A461E13E6F10024ABF9 /* GyroscopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroscopeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +100,11 @@
 			isa = PBXGroup;
 			children = (
 				B92DD1891E11620000A73F2D /* MotionEventViewController.swift */,
+				B9AC8A441E13E6C50024ABF9 /* AccelerometerViewController.swift */,
 				B98EB12D1E12A4DC0072A835 /* ShakeMotionViewController.swift */,
 				4E889A431E08DB1F001A5FC4 /* SFParentView.swift */,
 				4E889A421E08DB1F001A5FC4 /* DeliverTouchEventsToViewOutsideTheParentView-Bridging-Header.h */,
+				B9AC8A461E13E6F10024ABF9 /* GyroscopeViewController.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			files = (
 				4E889A401E08C724001A5FC4 /* TestParentView.m in Sources */,
 				B92DD18A1E11620000A73F2D /* MotionEventViewController.swift in Sources */,
+				B9AC8A451E13E6C50024ABF9 /* AccelerometerViewController.swift in Sources */,
+				B9AC8A471E13E6F10024ABF9 /* GyroscopeViewController.swift in Sources */,
 				4E889A2F1E08C054001A5FC4 /* ViewController.m in Sources */,
 				4E889A2C1E08C054001A5FC4 /* AppDelegate.m in Sources */,
 				B98EB12E1E12A4DC0072A835 /* ShakeMotionViewController.swift in Sources */,

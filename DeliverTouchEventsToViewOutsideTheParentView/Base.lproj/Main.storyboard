@@ -79,10 +79,23 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Ar-MWh">
-                                <rect key="frame" x="16" y="597" width="343" height="70"/>
+                                <rect key="frame" x="16" y="517" width="343" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKv-aT-RLP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI4-pe-Szp">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="陀螺仪"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYh-B0-jgp">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="加速计"/>
+                                        <connections>
+                                            <segue destination="Y0W-dA-VuY" kind="push" id="Mbw-HO-OTn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKv-aT-RLP">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Shake Motion"/>
                                         <connections>
@@ -90,7 +103,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-JS-LWU">
-                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="120" width="343" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="加速计"/>
                                         <connections>
@@ -137,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLc-ge-LSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="124"/>
+            <point key="canvasLocation" x="1953" y="-277"/>
         </scene>
         <!--Shake Motion-->
         <scene sceneID="m3S-nM-ulP">
@@ -156,7 +169,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1P-2o-KpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="851"/>
+            <point key="canvasLocation" x="1953" y="475"/>
+        </scene>
+        <!--加速计-->
+        <scene sceneID="UH0-74-3WS">
+            <objects>
+                <viewController id="Y0W-dA-VuY" customClass="AccelerometerViewController" customModule="DeliverTouchEventsToViewOutsideTheParentView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Cz-Ma-sir"/>
+                        <viewControllerLayoutGuide type="bottom" id="vdx-o2-9bD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0kI-vo-yyU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnL-iF-hZ5">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VnL-iF-hZ5" firstAttribute="centerX" secondItem="0kI-vo-yyU" secondAttribute="centerX" id="DMf-AU-Y6q"/>
+                            <constraint firstItem="VnL-iF-hZ5" firstAttribute="centerY" secondItem="0kI-vo-yyU" secondAttribute="centerY" id="iAX-F6-EMQ"/>
+                            <constraint firstItem="VnL-iF-hZ5" firstAttribute="width" secondItem="0kI-vo-yyU" secondAttribute="width" id="sOJ-Vg-ZqL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="加速计" id="Wk0-Zw-gI5"/>
+                    <connections>
+                        <outlet property="accelerometerLabel" destination="VnL-iF-hZ5" id="OmF-Q8-UFK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wN7-hK-8KS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="1267"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ru1-4n-hSf">
