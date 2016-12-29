@@ -85,6 +85,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="陀螺仪"/>
+                                        <connections>
+                                            <segue destination="y8v-pw-UXE" kind="push" id="vXX-mh-JMY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYh-B0-jgp">
                                         <rect key="frame" x="0.0" y="40" width="343" height="30"/>
@@ -170,6 +173,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1P-2o-KpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1953" y="475"/>
+        </scene>
+        <!--陀螺仪-->
+        <scene sceneID="fUT-co-JeS">
+            <objects>
+                <viewController id="y8v-pw-UXE" customClass="GyroscopeViewController" customModule="DeliverTouchEventsToViewOutsideTheParentView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yMb-aS-hel"/>
+                        <viewControllerLayoutGuide type="bottom" id="fTr-ha-sI1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YnJ-GU-ZRl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umP-qd-6D1">
+                                <rect key="frame" x="-0.5" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="umP-qd-6D1" firstAttribute="centerX" secondItem="YnJ-GU-ZRl" secondAttribute="centerX" id="Coy-iP-Bvb"/>
+                            <constraint firstItem="umP-qd-6D1" firstAttribute="width" secondItem="YnJ-GU-ZRl" secondAttribute="width" id="bBG-L9-hnn"/>
+                            <constraint firstItem="umP-qd-6D1" firstAttribute="centerY" secondItem="YnJ-GU-ZRl" secondAttribute="centerY" id="fvf-Ec-bdE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="陀螺仪" id="SK2-g6-uQa"/>
+                    <connections>
+                        <outlet property="dataLabel" destination="umP-qd-6D1" id="ymb-mw-CgH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RG7-4J-5gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="1153"/>
         </scene>
         <!--加速计-->
         <scene sceneID="UH0-74-3WS">
